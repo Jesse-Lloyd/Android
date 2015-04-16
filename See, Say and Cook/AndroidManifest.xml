@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.testapp"
+    android:installLocation="preferExternal"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <application
+        android:allowBackup="true"
+        android:theme="@style/AppTheme"
+        android:label="See, Say and Cook">
+        <activity
+            android:name="com.example.activities.MainActivity"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.activities.RecipeList"
+            android:label="recipe list"
+            android:icon="@drawable/ic_launcher"
+            android:parentActivityName="com.example.activities.MainActivity" >
+        </activity>
+        <activity
+            android:name="com.example.activities.IngredientList"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="Ingredients"
+            android:icon="@drawable/ic_launcher"
+            android:parentActivityName="com.example.activities.RecipeList" >
+        </activity>
+        <activity
+            android:name="com.example.activities.AddRecipe"
+            android:label="@string/addrecipe"
+            android:icon="@drawable/ic_launcher"
+            android:parentActivityName="com.example.activities.AddEditRecipe" >
+        </activity>
+        <activity
+            android:name="com.example.activities.EditRecipe"
+            android:label="@string/editrecipe"
+            android:icon="@drawable/ic_launcher"
+            android:parentActivityName="com.example.activities.AddEditRecipe" >
+        </activity>
+        <activity
+            android:name="com.example.activities.Imports"
+            android:label="@string/title_activity_imports"
+            android:icon="@drawable/ic_launcher"
+            android:parentActivityName="com.example.activities.MainActivity" >
+        </activity>
+        <activity
+            android:name="com.example.activities.Export"
+            android:label="@string/title_activity_export"
+            android:icon="@drawable/ic_launcher"
+            android:parentActivityName="com.example.activities.MainActivity" >
+        </activity>
+        <activity
+            android:name="com.example.activities.RecipeSteps"
+            android:label="@string/title_activity_steps"
+            android:icon="@drawable/ic_launcher"
+            android:parentActivityName="com.example.activities.RecipeList" >
+        </activity>
+        <activity
+            android:name="com.example.activities.AddIngredient"
+            android:label="@string/title_activity_add_ingredient"
+            android:icon="@drawable/ic_launcher"
+            android:parentActivityName="com.example.activities.MainActivity" >
+        </activity>
+        <activity
+            android:name="com.example.activities.Fullscreen"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_fullscreen"
+            android:icon="@drawable/ic_launcher"
+            android:theme="@style/FullscreenTheme" >
+        </activity>
+    </application>
+
+</manifest>
